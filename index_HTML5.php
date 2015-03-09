@@ -1,51 +1,8 @@
 <?php
 
-function parcours( $tab ){
-	$mail_data = "<pre>".var_dump($tab)."</pre>\n<br>";
-	foreach($tab as $x => $x_value) {
-   	$mail_data .="Key=" . $x . ", Value=" . $x_value."\n<br>";
-   		if (is_array($x_value)){
-   			foreach($x_value as $y => $y_value) {
-   				$mail_data .="1-Key=" . $y . ", Value=" . $y_value."\n<br>";
-   				if (is_array($y_value)){
-   					foreach($y_value as $z => $z_value) {
-   						$mail_data .="2-Key=" . $z . ", Value=" . $z_value."\n<br>";
-   							if (is_array($z_value)){
-   								foreach($z_value as $a => $a_value) {
-   								$mail_data .="3-Key=" . $a . ", Value=" . $a_value."\n<br>";
-   									if (is_array($a_value)){
-   										foreach($a_value as $b => $b_value) {
-   										$mail_data .="4-Key=" . $b . ", Value=" . $b_value."\n<br>";
-   										if (is_array($b_value)){
-   											foreach($b_value as $c => $c_value) {
-   												$mail_data .="5-Key=" . $c . ", Value=" . $c_value."\n<br>";
-   												if (is_array($c_value)){
-   													foreach($c_value as $d => $d_value) {
-   														$mail_data .="6-Key=" . $d . ", Value=" . $d_value."\n<br>";
-   														if (is_array($d_value)){
-   															foreach($e_value as $e => $e_value) {
-   																$mail_data .="7-Key=" . $e . ", Value=" . $e_value."\n<br>";
-   															}
-   														}
-   													}
-   												}
-   											}
-   										}
-   									}
-   								}
-   							}
-   						}
-   					}
-   				}
-   			}
- 		}
- 	}
- 	return $mail_data;
-}
 // Test fonction mail();
    // *** A configurer
    $to    = "mehdi.guiraud@gmail.com";
-   // adresse MAIL OVH liée à l’hébergement.
    $from  = "me@mehdiguiraud.info";
    // *** Laisser tel quel
    $JOUR  = date("Y-m-d");
@@ -65,7 +22,6 @@ function parcours( $tab ){
    $mail_Data .= "request URI: ". $_SERVER['REQUEST_URI']."<br> \n";
    $mail_Data .= "Site : ". $SITE."<br> \n";
    $mail_Data .= "Global : \n";
-   //$mail_Data .= parcours( $GLOBALS );
    $mail_Data .= "</body> \n";
    $mail_Data .= "</HTML> \n";
    $headers  = "MIME-Version: 1.0 \n";
@@ -161,7 +117,9 @@ function parcours( $tab ){
 
 <strong>Infographie statique :</strong><ul style="text-align: left;margin-left:-120px;width:500px"><li><Li><a href="http://www.lagazettedescommunes.com/167289/infographie-lutte-contre-lhomophobie-les-villes-passent-a-laction/" title="La journée nationale de lutte contre l’homophobie doit servir de prise de conscience : en 2012, les agressions homophobes ont encore augmenté de 27% . Les collectivités, à leur échelle, peuvent réagir. Comment ? Voici 12 pistes d’action illustrées par des exemples de bonnes pratiques de villes déjà engagées."> Lutte contre l’homophobie</a>- La Gazette des communes</li></ul></p><p>
 <strong>Articles :</strong>
-<ul style="text-align: left;margin-left:-120px;width:500px"><li><a href="http://www.lagazettedescommunes.com/168172/oaklandopenbudget-ou-quand-les-citoyens-se-saisissent-de-lopen-data/" title="Voici un exemple où la mise à disposition des données publiques permet à une communauté de se saisir du vivre ensemble. Au départ, des citoyens d'Oakland (Etat-Unis, Californie), demandeurs et engagés, sollicitent leur municipalité pour accéder aux données budgétaires.Sans méfiance ni défiance à l'égard des dépenses de la mairie, ils sont convaincus que pour comprendre la gestion de leur ville, il faut pouvoir explorer son fonctionnement.">OaklandOpenBudget ou quand les citoyens se saisissent de l’Open Data</a>- La Gazette des communes</li>
+<ul style="text-align: left;margin-left:-120px;width:500px">
+<li><a href="http://www.lexpress.fr/culture/les-ados-aiment-naruto-parce-qu-ils-se-retrouvent-en-lui_730561.html" title="Naruto a dix ans. L'occasion d'interroger Yann Leroux, psychanalyste, spécialiste des mondes numériques et des jeux vidéos sur l'influence de ce phénomène sur ceux qui ont fait son succès: les adolescents.">Yann Leroux :« "Les ados aiment Naruto parce qu'ils se retrouvent en lui »</a> - L'express</li>
+<li><a href="http://www.lagazettedescommunes.com/168172/oaklandopenbudget-ou-quand-les-citoyens-se-saisissent-de-lopen-data/" title="Voici un exemple où la mise à disposition des données publiques permet à une communauté de se saisir du vivre ensemble. Au départ, des citoyens d'Oakland (Etat-Unis, Californie), demandeurs et engagés, sollicitent leur municipalité pour accéder aux données budgétaires.Sans méfiance ni défiance à l'égard des dépenses de la mairie, ils sont convaincus que pour comprendre la gestion de leur ville, il faut pouvoir explorer son fonctionnement.">OaklandOpenBudget ou quand les citoyens se saisissent de l’Open Data</a>- La Gazette des communes</li>
 <li><a href="http://www.lagazettedescommunes.com/170526/moralisation-de-la-vie-publique-une-transparence-encore-inachevee/" title="La commission des lois de l’Assemblée nationale a terminé, le 6 juin, l’examen du projet de loi de transparence de la vie publique. Les députés ont largement affaibli la portée du texte pourtant initié par le président de la République à la suite du scandale provoqué par l’affaire Cahuzac." >Moralisation de la vie publique : une transparence inachevée</a> - La Gazette des communes</li>
 <li><a href="http://www.strategies.fr/etudes-tendances/dossiers/248711/246229W/facebook-mobile-first.html" title="Interview de Laurent Solly. En 2012, Facebook s'est entièrement réorganisé pour suivre des utilisateurs devenus mobinautes. Retour avec l'ancien responsable de la publicité chez TF1,désormais directeur général de Facebook France, sur les enjeux d'une transmission digitale." >Réseaux Sociaux : Mobile first</a> - Supplément Stratégies</li></ul></p><p>
 <strong>Journalisme de données</strong>
