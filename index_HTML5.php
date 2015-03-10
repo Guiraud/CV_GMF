@@ -65,10 +65,10 @@
     <meta property="og:title" content="Mehdi Guiraud journaliste multimédia" /> 
          <meta property="og:image" content="http://www.mehdiguiraud.info/img/avatar.png" /> 
          <meta property="og:description" content="Mehdi GUIRAUD, 39 ans. A l'issue d'une quinzaine d'année dans l'informatique, j'ai décidé de devenir journaliste. 
-            Je photographie, interviewe, filme et raconte des histoires depuis plus de 4 ans. #societe #transparence #DigitalHumanities" /> 
+            Je photographie, interviewe, filme et raconte des histoires à l'aide des données entre autre. #societe #transparence #DigitalHumanities, #bigdata, #datascience, " /> 
          <meta property="og:url" content="http://www.mehdiguiraud.info">
     <meta name="author" content="Mehdi GUIRAUD">
-    <meta name="description" content="journaliste plurimédia et datajournaliste, photographie, vidéo.">
+    <meta name="description" content="journaliste de données,datajournaliste,data, big data, datamining,data science, photographie, vidéo.">
     <link rel="publisher" href="https://plus.google.com/+MehdiGUIRAUD" />
     
     <link rel="stylesheet" href="lib/curtain.css">
