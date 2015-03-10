@@ -8,7 +8,8 @@
    $JOUR  = date("Y-m-d");
    $HEURE = date("H:i");
    $SITE = $_SERVER['HTTP_REFERER']. " IP: ".$_SERVER['REMOTE_ADDR']." Avec ". $_SERVER['HTTP_USER_AGENT'].
-   $Subject = "[EGO-ANALYTICS] - arrivé le $JOUR $HEURE par ".$_SERVER['REMOTE_ADDR'];
+
+   $Subject = " [EGO-ANALYTICS] - arrivé le $JOUR $HEURE à ".$GLOBALS["_SERVER"]["GEOIP_COUNTRY_CODE"]. ",".$GLOBALS["_SERVER"]["GEOIP_CITY"]. " par ". $_SERVER['REMOTE_ADDR'];
    $mail_Data = "";
    $mail_Data .= "<html> \n";
    $mail_Data .= "<head> \n";
